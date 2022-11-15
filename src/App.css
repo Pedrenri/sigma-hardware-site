@@ -1,0 +1,102 @@
+/* Custom Font */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/* COLOURS */
+
+:root {
+  --font-color: #fafafa;
+}
+
+[data-theme="dark"] {
+}
+
+/* Default Css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+/* NAVBAR CSS */
+
+.container-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: var(--font-color);
+  padding: 0 3rem;
+}
+
+.logo {
+  font-size: 50px;
+}
+
+.ul-nav {
+  display: flex;
+  margin-bottom: 0;
+}
+
+.ul-nav li {
+  margin: 0 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.ul-nav a {
+  text-decoration: none;
+  color: var(--font-color);
+  font-weight: 500;
+}
+
+.ul-nav a:hover {
+  color: #fafafa;
+}
+
+.ul-nav a::after {
+  display: block;
+  content: "";
+  border-bottom: solid 2px #fafafa;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+
+
+
+.ul-nav a:hover::after{
+  transform: scaleX(1);
+}
+
+.switch {
+  width: 32px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.4);
+  display: flex;
+  justify-content: flex-start;
+  border-radius: 10px;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.switch[data-isOn="true"] {
+  justify-content: flex-end;
+  background-color: rgb(64, 231, 153);
+}
+
+.handle {
+  width: 16px;
+  height: 16px;
+  background-image: url(https://png.pngtree.com/png-clipart/20210618/ourmid/pngtree-moon-silhouette-crescent-silhouette-png-image_3455569.jpg);
+  background-size: cover;
+  border-radius: 8px;
+}
+
+.handle[data-isOn="true"] {
+  width: 16px;
+  height: 16px;
+  background-image: url(https://static.vecteezy.com/ti/vetor-gratis/p1/5267597-icone-de-sol-branco-vetor.jpg);
+  background-size: cover;
+  border-radius: 8px;
+}
