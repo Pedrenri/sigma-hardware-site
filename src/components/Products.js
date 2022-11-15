@@ -5,7 +5,6 @@ function Products() {
   return (
     <div>
       <NavBar />
-      
     </div>
   );
 }
