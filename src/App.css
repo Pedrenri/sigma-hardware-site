@@ -19,6 +19,10 @@
   list-style: none;
 }
 
+main {
+  background-color: #f0f8ff;
+}
+
 /* NAVBAR CSS */
 
 .container-nav {
@@ -27,11 +31,18 @@
   align-items: center;
   background-color: rgba(0, 0, 0, 0.8);
   color: var(--font-color);
-  padding: 0 3rem;
+  position: fixed;
+  width: 100%;
+  height: 5rem;
 }
 
 .logo {
   font-size: 50px;
+  height: 5rem;
+}
+
+.logo img {
+  height: 100%;
 }
 
 .ul-nav {
@@ -40,7 +51,6 @@
 }
 
 .ul-nav li {
-  margin: 0 1rem;
   display: flex;
   align-items: center;
 }
@@ -63,9 +73,7 @@
   transition: transform 250ms ease-in-out;
 }
 
-
-
-.ul-nav a:hover::after{
+.ul-nav a:hover::after {
   transform: scaleX(1);
 }
 
@@ -99,4 +107,134 @@
   background-image: url(https://static.vecteezy.com/ti/vetor-gratis/p1/5267597-icone-de-sol-branco-vetor.jpg);
   background-size: cover;
   border-radius: 8px;
+}
+
+/* HOME CSS */
+
+.home-container {
+  padding: 7rem 0 0 0;
+}
+
+.separator {
+  width: 80%;
+  height: 2px;
+  margin-top: 1rem;
+  border-width: 2px;
+  border-style: solid;
+  border-image: linear-gradient(to right, #ff00e5, #001aff) 1;
+  border-radius: 10px;
+}
+
+.text-container {
+  text-align: justify;
+  color: #5a5a5a;
+}
+
+.product-holder a {
+  padding: 0.5rem 2rem;
+  border: solid 1px black;
+  text-decoration: none;
+  color: black;
+  transition: all 0.5s;
+  position: relative;
+}
+
+.product-holder a:hover {
+  padding: 0.5rem 2rem;
+  border: solid 1px black;
+  text-decoration: none;
+  color: white;
+}
+
+.product-holder a::before {
+  content: "";
+  background: #000;
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: 0.3s ease-in-out;
+}
+.product-holder a:hover::before {
+  width: 100%;
+}
+
+.banner-game {
+  background-image: url("./assets/img/BannerGame.jpeg");
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.banner-game article {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.banner-game a {
+  padding: 0.5rem 2rem;
+  border: solid 1px white;
+  text-decoration: none;
+  color: white;
+}
+
+.banner-game a:hover {
+  color: white;
+}
+
+.news-articles a {
+  padding: 0.5rem 2rem;
+  border: solid 1px #000;
+  text-decoration: none;
+  color: #000;
+  position: relative;
+  transition: all 0.5s;
+}
+
+.news-articles a:hover {
+  padding: 0.5rem 2rem;
+  border: solid 1px black;
+  text-decoration: none;
+  color: #fff;
+}
+
+.news-articles a::before {
+  content: "";
+  background: #000;
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.3s ease-in-out;
+  z-index: -1;
+}
+.news-articles a:hover::before {
+  width: 100%;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: #010101;
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+}
+
+.newsletter {
+  height: 15rem;
+  background-color: #f0f8ff;
+  border-radius: 30px;
+  margin-top: -5rem;
+  -webkit-box-shadow: 0px 0px 50px -18px rgba(0, 0, 0, 0.27);
+  -moz-box-shadow: 0px 0px 50px -18px rgba(0, 0, 0, 0.27);
+  box-shadow: 0px 0px 50px -18px rgba(0, 0, 0, 0.27);
+}
+
+.newsletter .button {
+  border: 1px solid black;
+  background: none
 }

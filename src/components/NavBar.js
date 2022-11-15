@@ -16,24 +16,24 @@ const NavBar = () => {
   };
 
   return (
-    <div className="container-nav">
-      <div className="logo">Σ</div>
+    <div className="container-nav p-0">
+      <div className="logo"><img src={logo}/></div>
 
       <nav className="item">
         <ul className="ul-nav">
-          <li>
+          <li className="mx-2">
             <Link to="/">Início</Link>
           </li>
-          <li>
+          <li className="mx-2">
             <Link to="/Products">Produtos</Link>
           </li>
-          <li>
+          <li className="mx-2">
             <Link to="/news">Notícias</Link>
           </li>
-          <li>
+          <li className="mx-2">
             <Link to="/contact">Suporte</Link>
           </li>
-          <li>
+          <li className="mx-2">
             <div className="switch" data-isOn={isOn} onClick={toggleSwitch}>
               <motion.div className="handle" data-isOn={isOn} layout transition={spring} />
             </div>

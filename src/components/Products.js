@@ -5,9 +5,7 @@ function Products() {
   return (
     <div>
       <NavBar />
-      <div className="home-container">
-        ASDW
-      </div>
+      
     </div>
   );
 }
