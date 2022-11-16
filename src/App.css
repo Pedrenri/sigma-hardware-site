@@ -4,11 +4,18 @@
 /* COLOURS */
 
 :root {
-  --font-color: #fafafa;
+  --title-color: #000;
+  --font-color: #5a5a5a;
+  --main-color: #f0f8ff;
+  --button-color: #000;
+  --checked: #66bb6a;
 }
 
-:root[data-isOn="true"] {
-  --font-color: #000;
+[data-theme = 'dark'] {
+  --title-color: #fff;
+  --font-color: #fafafa;
+  --main-color: #212121;
+  --button-color: #fff;
 }
 
 /* Default Css */
@@ -18,20 +25,97 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
+  transition: all .5s;
+  
 }
 
+body {
+  overflow: overlay;
+}
+
+
 main {
-  background-color: #f0f8ff;
+  background-color: var(--main-color);
+  
+}
+
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #8f54a0 #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(143, 143, 143, 0.8);
+  border-radius: 10px;
 }
 
 /* NAVBAR CSS */
+
+.theme-switch {
+  display: inline-block;
+  height: 1.5rem;
+  position: relative;
+  width: 2.5rem;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 1rem;
+  left: 4px;
+  position: absolute;
+  transition: .4s;
+  width: 1rem;
+  background-image: url(https://cdn-icons-png.flaticon.com/512/15/15751.png);
+}
+
+input:checked+.slider {
+  background-color: var(--checked);
+}
+
+input:checked+.slider:before {
+  transform: translateX(1rem);
+}
+
+.slider.round {
+  border-radius: 1rem;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
 
 .container-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(0, 0, 0);
-  color: var(--font-color);
+  background-color: rgba(0, 0, 0,.9);
   width: 100%;
   height: 5rem;
 }
@@ -53,7 +137,7 @@ main {
 
 .ul-nav a {
   text-decoration: none;
-  color: var(--font-color);
+  color: #fafafa;
   font-weight: 500;
 }
 
@@ -73,41 +157,8 @@ main {
   transform: scaleX(1);
 }
 
-.switch {
-  width: 32px;
-  height: 20px;
-  background-color: rgba(255, 255, 255, 0.4);
-  display: flex;
-  justify-content: flex-start;
-  border-radius: 10px;
-  padding: 2px;
-  cursor: pointer;
-  transition: all 0.5s;
-}
-
-.switch[data-isOn="true"] {
-  justify-content: flex-end;
-  background-color: rgb(64, 231, 153);
-}
-
-.handle {
-  width: 16px;
-  height: 16px;
-  background-image: url(https://png.pngtree.com/png-clipart/20210618/ourmid/pngtree-moon-silhouette-crescent-silhouette-png-image_3455569.jpg);
-  background-size: cover;
-  border-radius: 8px;
-}
-
-.handle[data-isOn="true"] {
-  width: 16px;
-  height: 16px;
-  background-image: url(https://static.vecteezy.com/ti/vetor-gratis/p1/5267597-icone-de-sol-branco-vetor.jpg);
-  background-size: cover;
-  border-radius: 8px;
-}
-
 nav {
-  position: absolute;
+  position: fixed;
   background-color: rgba(0, 0, 0, 0.8);
   right: 0;
   transition: all .5s;
@@ -128,9 +179,10 @@ box-icon {
 .banner-container {
   background: url("./assets/img/BannerGPU.png");
   background-size: cover;
-  background-position: right;
+  background-position: center;
   height: 42rem;
 }
+
 
 .banner-text-holder {
   width: 30rem;
@@ -147,16 +199,15 @@ box-icon {
   border-radius: 10px;
 }
 
-.text-container {
-  text-align: justify;
-  color: #5a5a5a;
+.product-holder h1{
+  color: var(--title-color);
 }
 
 .button {
   padding: 0.5rem 2rem;
-  border: solid 1px black;
+  border: solid 1px var(--button-color);
   text-decoration: none;
-  color: black;
+  color: var(--button-color);
   transition: all 0.5s;
   position: relative;
   z-index: 1000
@@ -164,7 +215,6 @@ box-icon {
 
 .button:hover {
   padding: 0.5rem 2rem;
-  border: solid 1px black;
   text-decoration: none;
   color: grey;
 }
@@ -180,6 +230,13 @@ box-icon {
 
 .banner-game article {
   background-color: rgba(0, 0, 0, 0.8);
+}
+
+.news-holder h1 {
+  color: var(--title-color);
+}
+.news-holder p {
+  color: var(--font-color);
 }
 
 .buttonw {
