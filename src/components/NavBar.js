@@ -23,7 +23,6 @@ const NavBar = () => {
     }
   }
 
-  toggleSwitch.addEventListener("change", switchTheme, false);
 
   const currentTheme = localStorage.getItem("theme")
     ? localStorage.getItem("theme")
@@ -70,7 +69,7 @@ const NavBar = () => {
           </li>
           <li className="mx-2 lg:mx-6 mb-3">
             <label class="theme-switch" for="checkbox">
-              <input type="checkbox" id="checkbox" />
+              <input type="checkbox" onClick={switchTheme} id="checkbox" />
               <div class="slider round"></div>
               
             </label>
