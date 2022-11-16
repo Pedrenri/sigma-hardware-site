@@ -174,17 +174,17 @@ box-icon:hover {
 }
 
 .button {
-  padding: 0.5rem 2rem;
-  border: solid 1px var(--button-color);
+  padding: .5rem 3rem;
+  border: solid 2px var(--button-color);
   text-decoration: none;
   color: var(--button-color);
   transition: all 0.5s;
   position: relative;
   z-index: 1000;
+  font-weight: bold;
 }
 
 .button:hover {
-  padding: 0.5rem 2rem;
   text-decoration: none;
   color: var(--wt-h);
   background-color: var(--wb-h);
@@ -202,7 +202,7 @@ box-icon:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-.news-holder h1 {
+.news-holder h2 {
   color: var(--title-color);
 }
 .news-holder p {
