@@ -1,9 +1,5 @@
 import React from "react";
 import NavBar from "./NavBar";
-
-import news1 from "../assets/img/news1.png";
-import news2 from "../assets/img/news2.png";
-import { Link } from "react-router-dom";
 import Footer from "./Footer";
 import HomeBanner from "./HomeBanner";
 import HomeProduct from "./HomeProduct";

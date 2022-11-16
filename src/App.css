@@ -9,13 +9,17 @@
   --main-color: #f0f8ff;
   --button-color: #000;
   --checked: #66bb6a;
+  --wb-h: #000;
+  --wt-h: #fff;
 }
 
-[data-theme = 'dark'] {
+[data-theme="dark"] {
   --title-color: #fff;
   --font-color: #fafafa;
-  --main-color: #212121;
+  --main-color: #0e0e0e;
   --button-color: #fff;
+  --wb-h: #fff;
+  --wt-h: #000;
 }
 
 /* Default Css */
@@ -25,18 +29,15 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
-  transition: all .5s;
-  
+  transition: all 0.5s;
 }
 
 body {
   overflow: overlay;
 }
 
-
 main {
   background-color: var(--main-color);
-  
 }
 
 /* Firefox */
@@ -65,57 +66,18 @@ main {
   display: inline-block;
   height: 1.5rem;
   position: relative;
-  width: 2.5rem;
 }
 
 .theme-switch input {
   display: none;
 }
 
-.slider {
-  background-color: #ccc;
-  bottom: 0;
-  cursor: pointer;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  transition: .4s;
-}
-
-.slider:before {
-  background-color: #fff;
-  bottom: 4px;
-  content: "";
-  height: 1rem;
-  left: 4px;
-  position: absolute;
-  transition: .4s;
-  width: 1rem;
-  background-image: url(https://cdn-icons-png.flaticon.com/512/15/15751.png);
-}
-
-input:checked+.slider {
-  background-color: var(--checked);
-}
-
-input:checked+.slider:before {
-  transform: translateX(1rem);
-}
-
-.slider.round {
-  border-radius: 1rem;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-
 .container-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(0, 0, 0,.9);
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
   width: 100%;
   height: 5rem;
 }
@@ -133,7 +95,6 @@ input:checked+.slider:before {
   display: flex;
   align-items: center;
 }
-
 
 .ul-nav a {
   text-decoration: none;
@@ -159,19 +120,29 @@ input:checked+.slider:before {
 
 nav {
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.8);
-  right: 0;
-  transition: all .5s;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  right: 1rem;
+  transition: all 0.5s ease;
+  padding: 0;
+  transform: scale(1);
+  margin-top: 5.5rem;
 }
 
-nav.hidden {
-  display: none;
-  transition: all .5s;
+nav img {
+  height: 4rem;
+}
+
+nav.hidden2 {
+  opacity: 0;
 }
 
 box-icon {
   fill: white;
-  transition: all .5s;
+  transition: all 0.5s;
+}
+box-icon:hover {
+  cursor: pointer;
 }
 
 /* HOME CSS */
@@ -182,7 +153,6 @@ box-icon {
   background-position: center;
   height: 42rem;
 }
-
 
 .banner-text-holder {
   width: 30rem;
@@ -199,7 +169,7 @@ box-icon {
   border-radius: 10px;
 }
 
-.product-holder h1{
+.product-holder h1 {
   color: var(--title-color);
 }
 
@@ -210,15 +180,15 @@ box-icon {
   color: var(--button-color);
   transition: all 0.5s;
   position: relative;
-  z-index: 1000
+  z-index: 1000;
 }
 
 .button:hover {
   padding: 0.5rem 2rem;
   text-decoration: none;
-  color: grey;
+  color: var(--wt-h);
+  background-color: var(--wb-h);
 }
-
 
 .banner-game {
   background-image: url("./assets/img/BannerGame.jpeg");
@@ -248,6 +218,7 @@ box-icon {
 
 .buttonw:hover {
   color: white;
+  background-color: rgba(143, 143, 143, 0.5);
 }
 
 /* FOOTER */

@@ -2,39 +2,22 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/img/Logo.png";
 import { useState } from "react";
-
+import useLocalStorage from 'use-local-storage'
 import "boxicons";
 
 const NavBar = () => {
 
   /* DARK MODE */
+  const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const [theme, setTheme] = useLocalStorage('theme', defaultDark ? 'dark' : 'light');
 
-  const toggleSwitch = document.querySelector(
-    '.theme-switch input[type="checkbox"]'
-  );
-
-  function switchTheme(e) {
-    if (e.target.checked) {
-      document.documentElement.setAttribute("data-theme", "dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      document.documentElement.setAttribute("data-theme", "light");
-      localStorage.setItem("theme", "light");
-    }
+  const ThemeSwap = () => {
+    const newtheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newtheme)
+    document.documentElement.setAttribute('data-theme', theme)
+    console.log(theme)
   }
 
-
-  const currentTheme = localStorage.getItem("theme")
-    ? localStorage.getItem("theme")
-    : null;
-
-  if (currentTheme) {
-    document.documentElement.setAttribute("data-theme", currentTheme);
-
-    if (currentTheme === "dark") {
-      toggleSwitch.checked = true;
-    }
-  }
 
 
   const [IsActive, setIsActive] = useState(false);
@@ -53,25 +36,24 @@ const NavBar = () => {
           onClick={toggleActive}
         />
       </div>
-      <nav className={IsActive ? "item mt-20" : "hidden"}>
-        <ul className="ul-nav px-3">
-          <li className="mx-2 lg:mx-6 mb-3">
+      <nav className={IsActive ? "item px-4 py-2 flex items-center rounded-2xl" : "hidden2"}>
+      {/* <img src={logo} alt='logo' /> */}
+        <ul className="ul-nav px-0 flex flex-col md:flex-row m-0">
+          <li className="mx-2 my-1 md:my-0 lg:mx-6">
             <Link to="/">Início</Link>
           </li>
-          <li className="mx-2 lg:mx-6 mb-3">
+          <li className="mx-2 my-1 md:my-0 lg:mx-6">
             <Link to="/Products">Produtos</Link>
           </li>
-          <li className="mx-2 lg:mx-6 mb-3">
+          <li className="mx-2 my-1 md:my-0 lg:mx-6">
             <Link to="/news">Notícias</Link>
           </li>
-          <li className="mx-2 lg:mx-6 mb-3">
+          <li className="mx-2 my-1 md:my-0 lg:mx-6">
             <Link to="/contact">Suporte</Link>
           </li>
-          <li className="mx-2 lg:mx-6 mb-3">
+          <li className="mx-2 lg:mx-6">
             <label class="theme-switch" for="checkbox">
-              <input type="checkbox" onClick={switchTheme} id="checkbox" />
-              <div class="slider round"></div>
-              
+              <box-icon onClick={ThemeSwap} type='solid' name={theme==='dark' ? 'moon' : 'sun'}/>
             </label>
           </li>
         </ul>
