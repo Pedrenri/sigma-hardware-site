@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 function HomeBanner() {
     return (
         <section className="banner-container w-full flex items-end lg:items-center lg:px-12">
+          
           <div className="text-white w-full banner-text-holder px-8 py-4 gap-y-12">
             <h2>O PANTEÃO ESTÁ AQUI</h2>
             <p>

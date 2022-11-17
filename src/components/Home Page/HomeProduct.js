@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-import CPU from "../assets/img/CPU.png";
-import GPU from "../assets/img/GPU.png";
-import MEM from "../assets/img/MEM.png";
+import CPU from "../../assets/img/CPU.png";
+import GPU from "../../assets/img/ARES.png";
+import MEM from "../../assets/img/MEM.png";
 
 function HomeProduct() {
     return (

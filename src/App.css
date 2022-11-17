@@ -127,6 +127,7 @@ nav {
   padding: 0;
   transform: scale(1);
   margin-top: 5.5rem;
+  z-index: 900;
 }
 
 nav img {
@@ -174,7 +175,7 @@ box-icon:hover {
 }
 
 .button {
-  padding: .5rem 3rem;
+  padding: 0.5rem 3rem;
   border: solid 2px var(--button-color);
   text-decoration: none;
   color: var(--button-color);
@@ -188,6 +189,23 @@ box-icon:hover {
   text-decoration: none;
   color: var(--wt-h);
   background-color: var(--wb-h);
+}
+
+.button-nl {
+  padding: 0.5rem 3rem;
+  border: solid 2px black;
+  text-decoration: none;
+  color: black;
+  transition: all 0.5s;
+  position: relative;
+  z-index: 1000;
+  background-color: #f0f8ff;
+}
+
+.button-nl:hover {
+  text-decoration: none;
+  color: white;
+  background-color: black;
 }
 
 .banner-game {
@@ -219,6 +237,96 @@ box-icon:hover {
 .buttonw:hover {
   color: white;
   background-color: rgba(143, 143, 143, 0.5);
+}
+
+/* PRODUCTS PAGE */
+
+.prod-ul a {
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+.prod-ul a::after {
+  display: block;
+  content: "";
+  border-bottom: solid 2px var(--wb-h);
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+
+.prod-ul a:hover::after {
+  transform: scaleX(1);
+}
+
+.carousel-item {
+  background-color: #f0f8ff;
+}
+
+.nav-pills {
+  width: 72%;
+  margin: 0 auto;
+  border-radius: 50px;
+  background-color: #3a3a3a;
+  overflow: hidden;
+}
+.nav-pills .nav-item {
+  width: 33.33333%;
+  height: 100%;
+}
+.nav-pills .nav-link {
+  background-color: transparent;
+  border-radius: 0;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  width: 100%;
+  font-size: 17px;
+  letter-spacing: 0.8px;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s ease-in-out;
+  text-align: center;
+  z-index: 0;
+}
+.nav-pills .nav-link::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
+  top: 0;
+  left: 0;
+  z-index: -10;
+  transition: 0.3s ease-in-out;
+}
+
+.nav-pills .nav-link.active {
+  color: white;
+}
+
+.nav-pills .nav-link.active::before {
+  width: 100% !important;
+}
+
+.nav-link#projects-tabs-tab-first {
+  border-right: 1px solid #818181;
+  border-radius: 55px 0px 0px 55px;
+  z-index: 10;
+}
+.nav-link#projects-tabs-tab-third {
+  border-left: 1px solid #818181;
+  border-radius: 0 55px 55px 0;
+}
+
+.text-holder-products {
+  color: white;
+}
+
+.text-holder-products p {
+  color: #5a5a5a;
+  font-weight: 500;
 }
 
 /* FOOTER */

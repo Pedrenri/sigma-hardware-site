@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import news1 from "../assets/img/news1.png";
-import news2 from "../assets/img/news2.png";
+import news1 from "../../assets/img/news1.png";
+import news2 from "../../assets/img/news2.png";
 
 function HomeNews() {
     return (

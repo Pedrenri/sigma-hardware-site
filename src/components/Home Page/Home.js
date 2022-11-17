@@ -1,10 +1,11 @@
 import React from "react";
-import NavBar from "./NavBar";
-import Footer from "./Footer";
+import NavBar from "../NavBar";
+import Footer from "../Footer";
 import HomeBanner from "./HomeBanner";
 import HomeProduct from "./HomeProduct";
 import GameBanner from "./GameBanner";
 import HomeNews from "./HomeNews";
+import Separator from "../Separator";
 
 function Home() {
   return (
@@ -12,7 +13,7 @@ function Home() {
       <NavBar />
       <main className="flex flex-col items-center">
         <HomeBanner/>
-        <div className="separator my-12" />
+        <Separator/>
         <HomeProduct/>
         <GameBanner/>
         <HomeNews/>
