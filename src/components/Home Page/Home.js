@@ -11,8 +11,8 @@ function Home() {
   return (
     <div>
       <NavBar />
-      <main className="flex flex-col items-center">
-        <HomeBanner/>
+      <main className="flex flex-col items-center pt-20">
+        <HomeBanner />
         <Separator/>
         <HomeProduct/>
         <GameBanner/>
