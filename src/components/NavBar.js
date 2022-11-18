@@ -18,8 +18,6 @@ const NavBar = () => {
     console.log(theme)
   }
 
-
-
   const [IsActive, setIsActive] = useState(false);
 
   const toggleActive = () => setIsActive(!IsActive);
@@ -46,10 +44,10 @@ const NavBar = () => {
             <Link to="/Products">Produtos</Link>
           </li>
           <li className="mx-2 my-1 md:my-0 lg:mx-6">
-            <Link to="/news">Notícias</Link>
+            <Link to="/News">Notícias</Link>
           </li>
           <li className="mx-2 my-1 md:my-0 lg:mx-6">
-            <Link to="/contact">Suporte</Link>
+            <Link to="/Support">Suporte</Link>
           </li>
           <li className="mx-2 lg:mx-6">
             <label class="theme-switch" for="checkbox">

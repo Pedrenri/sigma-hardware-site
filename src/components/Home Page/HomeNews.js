@@ -1,12 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import news1 from "../../assets/img/news1.png";
-import news2 from "../../assets/img/news2.png";
+import news2 from "../../assets/img/CPU4.png";
 
 function HomeNews() {
     return (
         <div className="news-holder flex flex-col lg:flex-row md:gap-x-6 px-6 lg:px-20">
-          <div className="flex flex-column mb-20 lg:w-1/2">
+          
+          <div className="flex flex-column mb-20 lg:w-1/2"> 
             <div className='h-1/2 overflow-hidden'>
               <img src={news1} />
             </div>
@@ -24,14 +25,15 @@ function HomeNews() {
               </Link>
             </article>
           </div>
+
           <div className="flex flex-column items-center mb-20 lg:w-1/2">
             <div className='h-1/2 overflow-hidden'>
-              <img src={news2} />
+              <img src={news2} className='2xl:mb-24' />
             </div>
             <article className="px-3 py-6 text-justify w-full">
               <h2 className="mb-3">Pandora</h2>
               <p className='lg:text-md xl:text-xl lg:h-36'>
-                Os Sigma Pandora são a nova linha de processadores Sigma.
+                O Sigma PANDORA é o novo processador Sigma. Com velocidades e especificações nunca antes vistas, ele atenderá tudo e todos, em qualquer situação.
               </p>
               <Link to="/news" className="button font-semibold">
                 VEJA MAIS

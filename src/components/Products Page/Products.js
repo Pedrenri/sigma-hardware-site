@@ -2,6 +2,7 @@ import React from "react";
 import NavBar from "../NavBar";
 import ProductGen from "./ProductGen";
 import Separator from "../Separator";
+import Footer from "../Footer";
 
 import ARES from "../../assets/img/ARES.png";
 import ARES2 from "../../assets/img/ARES2.png";
@@ -71,8 +72,11 @@ function Products() {
     <div>
       <NavBar />
 
-      <main className="pt-20 flex flex-col items-center">
-        <div className="product-banner px-8 lg:px-40 xl:px-96 py-12 bg-black w-full mb-20">
+      <main className="pt-20 flex flex-col items-center pb-32">
+        <div className=" pt-20 title flex align-center bg-white py-3 md:py-6 px-8 md:px-24 w-full">
+          <h3>Produtos Sigma</h3>
+        </div>
+        <div className="product-banner px-8 lg:px-40 xl:px-80 pt-12 bg-black w-full mb-20">
           <img src={ProductBanner} alt="banner" />
         </div>
 
@@ -107,6 +111,7 @@ function Products() {
           </Tab.Content>
         </Tab.Container>
       </main>
+      <Footer />
     </div>
   );
 }

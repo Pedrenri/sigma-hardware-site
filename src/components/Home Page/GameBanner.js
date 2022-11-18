@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 
 function GameBanner() {
     return (
-        <div className="banner-game pt-80 mb-12 md:p-6 ">
-          <article className="bannerGText text-white text-justify px-10 py-6 md:w-72 xl:h-80 xl:w-96 xl:flex xl:flex-col xl:gap-y-4">
+        <div className="banner-game mb-12 md:p-6 h-96 flex items-end md:items-center">
+          <article className="bannerGText text-white text-justify px-10 py-3 md:w-72  xl:w-96 xl:flex xl:flex-col xl:gap-y-2">
             <h1>Poder Bruto</h1>
             <p>
               As novas GPU com arquitetura Sigma Pantheon bateram todos os
