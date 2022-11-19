@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 function NewsGen({ title, image }) {
   return (
     <motion.div
-      className="newholder flex flex-col md:px-0 w-full md:my-4 shadow-sm"
+      className="newholder flex flex-col md:px-0 w-full md:my-4 shadow-sm mb-4 md:mb-0"
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.95 }}
       transition={{ type: "spring", stiffness: 400, damping: 17 }}

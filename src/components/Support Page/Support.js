@@ -6,7 +6,7 @@ function Support() {
   return (
     <div>
       <Navbar />
-      <main className="pt-20 h-screen">
+      <main className="pt-20">
         <div className=" pt-20 title flex align-center bg-white py-3 md:py-6 px-8 md:px-24 w-full">
           <h3>Suporte</h3>
         </div>
